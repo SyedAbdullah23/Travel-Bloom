@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TravelBloom — Contact Us</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e2a30;
+            padding: 12px 24px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+        }
+
+        .navbar-logo img {
+            height: 40px;
+        }
+
+        .navbar-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .navbar-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url('./images/abi.png') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 70px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(36, 95, 107, 0.6);
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            width: 100%;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        /* Left content */
+        .left {
+            flex: 1;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            background: rgb(36,95,107);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: white;
+        }
+
+        h1 {
+            font-size: 60px;
+            margin: 0 0 20px;
+        }
+
+        p.lead {
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* Social sidebar */
+        .social-sidebar {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            z-index: 3;
+        }
+
+        .social-sidebar a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        /* Contact Form */
+        .form-frame {
+            position: relative;
+            width: 360px;
+        }
+
+        .form-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(6px);
+            border-radius: 12px;
+            padding: 22px;
+        }
+
+        .form-card h3 {
+            margin: 0 0 14px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+            margin-top: 5px;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .btn {
+            margin-top: 12px;
+            background: rgb(36,95,107);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: rgb(28, 73, 82);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            h1 {
+                font-size: 40px;
+            }
+            .form-frame {
+                width: 100%;
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="./images/Your paragraph text.png" alt="Logo">
+            <span>TravelBloom</span>
+        </div>
+        <div class="navbar-links">
+            <a href="./travel_recommendation.html">Home</a>
+            <a href="./about.html">About Us</a>
+            <a href="./contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="social-sidebar">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="container">
+            <div class="left">
+                <div class="brand">
+                    <div class="logo">TB</div>
+                    <div>TravelBloom</div>
+                </div>
+                <h1>CONTACT US</h1>
+                <p class="lead">Get in touch — we'd love to hear from you. Whether you have questions, feedback, or want to collaborate, drop us a message.</p>
+            </div>
+
+            <div class="form-frame">
+                <aside class="form-card">
+                    <h3>Send us a message</h3>
+                    <form onsubmit="event.preventDefault();alert('Form submitted!');">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your Name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="you@example.com" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Write your message..."></textarea>
+
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </aside>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
